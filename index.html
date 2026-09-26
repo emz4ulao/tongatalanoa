@@ -7,519 +7,503 @@
 <title>TongaTalanoa AI</title>
 
 <style>
-
-:root{
-  --navy:#092b3a;
-  --teal:#0d7c86;
-  --aqua:#55c8c0;
-  --sand:#f5ead7;
-  --coral:#e9785b;
-  --ink:#17333d;
-  --white:#fff;
-  --muted:#6b7d84;
-  --shadow:0 18px 45px rgba(9,43,58,.13);
-  --radius:24px;
+:root {
+    --navy: #082f3f;
+    --teal: #078b91;
+    --aqua: #55d1c5;
+    --sand: #f5ead7;
+    --coral: #e9785b;
+    --ink: #17333d;
+    --muted: #6b7d84;
+    --white: #ffffff;
+    --light: #eef8f6;
+    --shadow: 0 18px 45px rgba(9,43,58,.13);
 }
 
-*{
-  box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-  margin:0;
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
-  color:var(--ink);
-  background:linear-gradient(135deg,#f7fbfa,#eef7f5);
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(135deg, #f7fbfa, #eaf6f4);
 }
 
-button{
-  font:inherit;
-  cursor:pointer;
-  border:0;
+button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
 }
 
-.app{
-  max-width:1180px;
-  margin:auto;
-  min-height:100vh;
+.app {
+    max-width: 1180px;
+    margin: auto;
+    min-height: 100vh;
 }
 
 /* HEADER */
 
-header{
-  padding:22px 24px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
+header {
+    padding: 22px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-weight:900;
-  color:var(--navy);
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 900;
+    color: var(--navy);
 }
 
-.logo{
-  width:48px;
-  height:48px;
-  border-radius:15px;
-  background:linear-gradient(145deg,var(--teal),var(--navy));
-  display:grid;
-  place-items:center;
-  color:white;
-  font-size:24px;
-  box-shadow:var(--shadow);
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+    background: linear-gradient(145deg, var(--teal), var(--navy));
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 25px;
+    box-shadow: var(--shadow);
 }
 
-.badge{
-  font-size:12px;
-  background:#dff5f1;
-  color:#09646b;
-  padding:7px 11px;
-  border-radius:999px;
-  font-weight:800;
+.badge {
+    font-size: 12px;
+    background: #dff5f1;
+    color: #09646b;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 800;
 }
 
 /* HERO */
 
-.hero{
-  margin:8px 24px 22px;
-  padding:42px;
-  border-radius:32px;
-  background:linear-gradient(
-    125deg,
-    var(--navy),
-    #0b5c6a 58%,
-    #17a09a
-  );
-  color:#fff;
-  position:relative;
-  overflow:hidden;
-  box-shadow:var(--shadow);
+.hero {
+    margin: 8px 24px 22px;
+    padding: 45px;
+    border-radius: 32px;
+    background:
+        linear-gradient(
+            125deg,
+            rgba(8,47,63,.97),
+            rgba(11,92,106,.94),
+            rgba(23,160,154,.92)
+        );
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
-.hero:after{
-  content:"";
-  position:absolute;
-  width:330px;
-  height:330px;
-  border:55px solid rgba(255,255,255,.08);
-  border-radius:50%;
-  right:-80px;
-  top:-110px;
+.hero:after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 55px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+    right: -90px;
+    top: -120px;
 }
 
-.hero h1{
-  font-size:clamp(34px,6vw,68px);
-  line-height:.95;
-  margin:0 0 16px;
-  max-width:760px;
-  letter-spacing:-2px;
+.hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: .95;
+    margin: 0 0 18px;
+    max-width: 760px;
+    letter-spacing: -2px;
 }
 
-.hero p{
-  max-width:690px;
-  font-size:18px;
-  line-height:1.55;
-  color:#d9f4f0;
-  margin:0 0 25px;
+.hero p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.55;
+    color: #d9f4f0;
+    margin: 0 0 25px;
 }
 
-.hero-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.primary{
-  background:#fff;
-  color:var(--navy);
-  padding:13px 18px;
-  border-radius:14px;
-  font-weight:850;
+.primary {
+    background: white;
+    color: var(--navy);
+    padding: 14px 19px;
+    border-radius: 14px;
+    font-weight: 850;
 }
 
-.secondary{
-  background:rgba(255,255,255,.12);
-  color:#fff;
-  padding:13px 18px;
-  border-radius:14px;
-  font-weight:800;
-  border:1px solid rgba(255,255,255,.2);
+.secondary {
+    background: rgba(255,255,255,.12);
+    color: white;
+    padding: 14px 19px;
+    border-radius: 14px;
+    font-weight: 800;
+    border: 1px solid rgba(255,255,255,.2);
 }
 
 /* MAIN */
 
-main{
-  padding:0 24px 50px;
+main {
+    padding: 0 24px 50px;
 }
 
-.tabs{
-  display:flex;
-  gap:8px;
-  overflow:auto;
-  padding:5px;
-  margin-bottom:18px;
+/* NAVIGATION */
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 5px;
+    margin-bottom: 20px;
 }
 
-.tab{
-  padding:11px 15px;
-  border-radius:13px;
-  background:#fff;
-  color:var(--muted);
-  font-weight:800;
-  white-space:nowrap;
+.tab {
+    padding: 12px 17px;
+    border-radius: 13px;
+    background: white;
+    color: var(--muted);
+    font-weight: 800;
+    white-space: nowrap;
 }
 
-.tab.active{
-  background:var(--navy);
-  color:#fff;
+.tab.active {
+    background: var(--navy);
+    color: white;
 }
 
-.panel{
-  display:none;
+/* PANELS */
+
+.panel {
+    display: none;
 }
 
-.panel.active{
-  display:block;
-}
-
-/* CARDS */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.card{
-  background:#fff;
-  border-radius:var(--radius);
-  padding:20px;
-  box-shadow:0 8px 30px rgba(9,43,58,.08);
-  border:1px solid #e4efed;
-}
-
-.card h3{
-  margin:8px 0 7px;
-  color:var(--navy);
-}
-
-.card p{
-  color:var(--muted);
-  line-height:1.5;
-  margin:0;
-}
-
-.icon{
-  font-size:30px;
-}
-
-/* BUTTONS */
-
-.cta{
-  margin-top:18px;
-  background:var(--sand);
-  border-radius:var(--radius);
-  padding:20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-}
-
-.cta button,
-.action{
-  background:var(--teal);
-  color:#fff;
-  padding:12px 15px;
-  border-radius:12px;
-  font-weight:800;
+.panel.active {
+    display: block;
 }
 
 /* TITLES */
 
-.section-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  margin:20px 0 13px;
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 20px 0 14px;
+    gap: 20px;
 }
 
-.section-title h2{
-  margin:0;
-  color:var(--navy);
+.section-title h2 {
+    margin: 0;
+    color: var(--navy);
 }
 
-.section-title span{
-  color:var(--muted);
-  font-size:13px;
+.section-title span {
+    color: var(--muted);
+    font-size: 13px;
 }
 
-/* SEARCH */
+/* CARDS */
 
-.search{
-  display:flex;
-  gap:8px;
-  background:#fff;
-  padding:8px;
-  border-radius:15px;
-  border:1px solid #dcebe8;
-  margin-bottom:15px;
+.card {
+    background: white;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(9,43,58,.08);
+    border: 1px solid #e4efed;
 }
 
-.search input{
-  flex:1;
-  border:0;
-  outline:0;
-  padding:10px;
-  font-size:15px;
+.card h3 {
+    margin: 8px 0 7px;
+    color: var(--navy);
 }
 
-/* LABELS */
-
-.pill{
-  display:inline-block;
-  padding:5px 9px;
-  border-radius:999px;
-  background:#edf8f6;
-  color:#08716f;
-  font-size:11px;
-  font-weight:850;
+.card p {
+    color: var(--muted);
+    line-height: 1.5;
 }
 
-/* EXPERIENCES */
-
-.experience{
-  min-height:190px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  background:linear-gradient(150deg,#fff,#edf9f6);
+.detail {
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 18px;
 }
 
-.experience .emoji{
-  font-size:45px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
 
-.row{
-  display:flex;
-  gap:9px;
-  flex-wrap:wrap;
+.icon {
+    font-size: 35px;
 }
 
-/* DETAILS */
-
-.detail{
-  display:grid;
-  grid-template-columns:1.3fr .7fr;
-  gap:18px;
-}
-
-/* STATUS */
-
-.status{
-  display:flex;
-  justify-content:space-between;
-  padding:13px 0;
-  border-bottom:1px solid #edf1f0;
-}
-
-/* PROGRESS */
-
-.progress{
-  height:10px;
-  background:#e7f0ee;
-  border-radius:99px;
-  overflow:hidden;
-}
-
-.progress i{
-  display:block;
-  height:100%;
-  width:72%;
-  background:var(--teal);
-}
-
-/* VOICE */
-
-.voice{
-  min-height:270px;
-  display:grid;
-  place-items:center;
-  text-align:center;
-  background:radial-gradient(circle at center,#e8faf7,#fff);
-}
-
-.mic{
-  width:108px;
-  height:108px;
-  border-radius:50%;
-  background:var(--teal);
-  color:#fff;
-  font-size:42px;
-  display:grid;
-  place-items:center;
-  margin:auto;
-  box-shadow:0 0 0 12px #d8f3ef;
-  transition:.2s;
-}
-
-.mic.live{
-  animation:pulse 1.2s infinite;
-}
-
-@keyframes pulse{
-  50%{
-    transform:scale(1.07);
-    box-shadow:0 0 0 25px rgba(13,124,134,.08);
-  }
+.pill {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #edf8f6;
+    color: #08716f;
+    font-size: 11px;
+    font-weight: 850;
 }
 
 /* CHAT */
 
-.chat{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  max-height:310px;
-  overflow:auto;
-  margin-bottom:12px;
+.chat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 330px;
+    overflow-y: auto;
+    margin-bottom: 14px;
 }
 
-.msg{
-  max-width:82%;
-  padding:11px 13px;
-  border-radius:16px;
-  line-height:1.4;
+.msg {
+    max-width: 82%;
+    padding: 12px 14px;
+    border-radius: 17px;
+    line-height: 1.45;
 }
 
-.ai{
-  background:#e8f5f3;
-  align-self:flex-start;
+.ai {
+    background: #e8f5f3;
+    align-self: flex-start;
 }
 
-.user{
-  background:var(--navy);
-  color:#fff;
-  align-self:flex-end;
+.user {
+    background: var(--navy);
+    color: white;
+    align-self: flex-end;
 }
 
-.choices{
-  display:flex;
-  gap:7px;
-  flex-wrap:wrap;
+.choices {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
-.choice{
-  background:#fff;
-  border:1px solid #cfe4e1;
-  color:var(--teal);
-  padding:9px 12px;
-  border-radius:12px;
-  font-weight:750;
+.choice {
+    background: white;
+    border: 1px solid #cfe4e1;
+    color: var(--teal);
+    padding: 10px 13px;
+    border-radius: 12px;
+    font-weight: 750;
 }
 
-/* QR */
+/* STATUS */
 
-.qr{
-  width:170px;
-  height:170px;
-  margin:auto;
-  background:
-    repeating-linear-gradient(
-      45deg,
-      #111 0 4px,
-      #fff 4px 8px
-    );
-  position:relative;
-  border:10px solid #fff;
-  box-shadow:0 8px 20px #0002;
+.status {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #edf1f0;
 }
 
-.qr:after{
-  content:"T";
-  position:absolute;
-  inset:52px;
-  background:#fff;
-  display:grid;
-  place-items:center;
-  font-weight:900;
-  font-size:36px;
-  color:var(--teal);
+.action {
+    background: var(--teal);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 12px;
+    font-weight: 800;
+}
+
+/* ISLAND CARDS */
+
+.experience {
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(150deg, white, #edf9f6);
+}
+
+.experience .emoji {
+    font-size: 48px;
+}
+
+.experience h3 {
+    font-size: 21px;
+}
+
+/* SEARCH */
+
+.search {
+    display: flex;
+    gap: 8px;
+    background: white;
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid #dcebe8;
+    margin-bottom: 15px;
+}
+
+.search input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    font-size: 15px;
 }
 
 /* PAYMENT */
 
-.payment{
-  font-size:34px;
-  font-weight:900;
-  color:var(--navy);
+.payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
 }
 
-/* ROLLOUT */
-
-.timeline{
-  display:grid;
-  gap:12px;
+.qr-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 }
 
-.phase{
-  display:grid;
-  grid-template-columns:70px 1fr;
-  gap:12px;
-  align-items:center;
+.qr {
+    width: 175px;
+    height: 175px;
+    background:
+        linear-gradient(90deg, #111 10px, transparent 10px) 0 0/25px 25px,
+        linear-gradient(#111 10px, transparent 10px) 0 0/25px 25px,
+        linear-gradient(90deg, transparent 15px, #111 15px 25px) 0 0/25px 25px,
+        linear-gradient(transparent 15px, #111 15px 25px) 0 0/25px 25px;
+    border: 12px solid white;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
 }
 
-.phase b{
-  background:var(--navy);
-  color:#fff;
-  border-radius:13px;
-  padding:12px;
-  text-align:center;
+.payment {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--navy);
+    margin: 20px 0;
 }
 
-.phase div{
-  background:#fff;
-  padding:14px;
-  border-radius:14px;
-  border:1px solid #e6efed;
+.payment small {
+    font-size: 15px;
+    color: var(--muted);
+}
+
+.payment-result {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #e8f8f4;
+    color: #08716f;
+    font-weight: 800;
+    display: none;
+}
+
+.flow {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.flow-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f5faf9;
+    padding: 13px;
+    border-radius: 14px;
+}
+
+.flow-number {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+}
+
+/* CTA */
+
+.cta {
+    margin-top: 18px;
+    background: var(--sand);
+    border-radius: 24px;
+    padding: 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.cta button {
+    background: var(--teal);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: 800;
+}
+
+/* TOAST */
+
+#toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--navy);
+    color: white;
+    padding: 14px 18px;
+    border-radius: 13px;
+    font-weight: 800;
+    transition: .25s;
+    z-index: 10;
 }
 
 /* FOOTER */
 
-footer{
-  padding:20px 24px 45px;
-  text-align:center;
-  color:var(--muted);
-  font-size:13px;
+footer {
+    padding: 20px 24px 45px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
 }
 
 /* MOBILE */
 
-@media(max-width:800px){
+@media(max-width:850px) {
 
-  .grid{
-    grid-template-columns:1fr;
-  }
+    .grid,
+    .payment-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .detail{
-    grid-template-columns:1fr;
-  }
+    .detail {
+        grid-template-columns: 1fr;
+    }
 
-  .hero{
-    padding:30px 24px;
-  }
+    .hero {
+        padding: 32px 24px;
+    }
 
-  .hero h1{
-    font-size:44px;
-  }
+    .hero h1 {
+        font-size: 45px;
+    }
 
+    .section-title {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
 }
-
 </style>
 </head>
 
@@ -531,27 +515,26 @@ footer{
 
 <header>
 
-  <div class="brand">
+    <div class="brand">
 
-    <div class="logo">
-      🌴
+        <div class="logo">
+            🌴
+        </div>
+
+        <div>
+            TongaTalanoa AI
+            <br>
+
+            <span style="font-size:11px;color:#6b7d84">
+                LOCAL-FIRST TOURISM
+            </span>
+        </div>
+
     </div>
 
-    <div>
-      TongaTalanoa AI
-      <br>
-
-      <span style="font-size:11px;color:#6b7d84">
-        LOCAL-FIRST TOURISM
-      </span>
-
+    <div class="badge">
+        TONGA TOURISM AI
     </div>
-
-  </div>
-
-  <div class="badge">
-    DEMO • LOW-BANDWIDTH READY
-  </div>
 
 </header>
 
@@ -560,1290 +543,994 @@ footer{
 
 <section class="hero">
 
-  <h1>
-    Discover Tonga.<br>
-    Connect locally.
-  </h1>
+    <h1>
+        Discover Tonga.<br>
+        Connect locally.
+    </h1>
 
-  <p>
-    Helping visitors discover authentic island
-    experiences while directing value to local
-    operators and communities.
-  </p>
+    <p>
+        Explore authentic island experiences,
+        discover local communities and make
+        your Tonga journey easier with AI.
+    </p>
 
-  <div class="hero-actions">
+    <div class="hero-actions">
 
-    <button
-      class="primary"
-      onclick="showTab('tourist')">
+        <button
+            class="primary"
+            onclick="showTab('tourist')">
 
-      🌎 Explore as tourist
+            🤖 Ask TongaTalanoa
 
-    </button>
+        </button>
 
-    <button
-      class="secondary"
-      onclick="showTab('vendor')">
+        <button
+            class="secondary"
+            onclick="showTab('islands')">
 
-      🎙️ Try Talanoa Market
+            🌴 Explore Tonga
 
-    </button>
+        </button>
 
-  </div>
+    </div>
 
 </section>
 
 
 <main>
 
-
 <!-- NAVIGATION -->
 
 <div class="tabs">
 
-  <button
-    class="tab active"
-    onclick="showTab('tourist')">
+    <button
+        class="tab active"
+        onclick="showTab('tourist')">
 
-    Tourist Concierge
+        🤖 Tourist Concierge
 
-  </button>
+    </button>
 
-  <button
-    class="tab"
-    onclick="showTab('islands')">
+    <button
+        class="tab"
+        onclick="showTab('islands')">
 
-    Island Discovery
+        🌴 Island Discovery
 
-  </button>
+    </button>
 
-  <button
-    class="tab"
-    onclick="showTab('vendor')">
+    <button
+        class="tab"
+        onclick="showTab('payment')">
 
-    Vendor Voice Flow
+        💳 Payment + QR
 
-  </button>
-
-  <button
-    class="tab"
-    onclick="showTab('payment')">
-
-    Payment + QR
-
-  </button>
-
-  <button
-    class="tab"
-    onclick="showTab('rollout')">
-
-    1-Year Rollout
-
-  </button>
+    </button>
 
 </div>
 
 
-<!-- TOURIST -->
+<!-- ================= TOURIST CONCIERGE ================= -->
 
 <section
-  id="tourist"
-  class="panel active">
+    id="tourist"
+    class="panel active">
 
-  <div class="section-title">
+    <div class="section-title">
 
-    <h2>
-      24/7 AI Concierge
-    </h2>
+        <h2>
+            🤖 Tourist Concierge
+        </h2>
 
-    <span>
-      Personalised • offline-friendly • local-first
-    </span>
-
-  </div>
-
-
-  <div class="detail">
-
-
-    <div class="card">
-
-      <div
-        class="chat"
-        id="chat">
-
-        <div class="msg ai">
-
-          Mālō e lelei! 👋
-          I’m TongaTalanoa.
-
-          Tell me what kind of
-          Tonga experience you want.
-
-        </div>
-
-        <div class="msg ai">
-
-          I can help with island hopping,
-          cultural experiences, nature,
-          local food and practical travel
-          information.
-
-        </div>
-
-      </div>
-
-
-      <div class="choices">
-
-        <button
-          class="choice"
-          onclick="ask('I want a cultural experience')">
-
-          🌺 Culture
-
-        </button>
-
-        <button
-          class="choice"
-          onclick="ask('I want nature and adventure')">
-
-          🐋 Nature
-
-        </button>
-
-        <button
-          class="choice"
-          onclick="ask('Help me island hop')">
-
-          ⛴️ Island hop
-
-        </button>
-
-        <button
-          class="choice"
-          onclick="ask('Show local food')">
-
-          🍽️ Local food
-
-        </button>
-
-      </div>
+        <span>
+            Your AI travel companion for Tonga
+        </span>
 
     </div>
 
 
-    <div class="card">
+    <div class="detail">
 
-      <span class="pill">
-        LIVE DEMO
-      </span>
+        <div class="card">
 
-      <h3>
-        Trip snapshot
-      </h3>
+            <div
+                class="chat"
+                id="chat">
 
-      <div class="status">
+                <div class="msg ai">
 
-        <span>
-          Interests
-        </span>
+                    Mālō e lelei! 👋
+                    I'm TongaTalanoa.
 
-        <b id="interest">
-          Not set
-        </b>
+                    Tell me what kind of
+                    Tonga experience you're looking for.
 
-      </div>
+                </div>
 
-      <div class="status">
+                <div class="msg ai">
 
-        <span>
-          Connectivity
-        </span>
+                    I can help you discover
+                    culture, nature, food and
+                    island adventures.
 
-        <b>
-          Offline cache ✓
-        </b>
+                </div>
 
-      </div>
-
-      <div class="status">
-
-        <span>
-          Ferry alerts
-        </span>
-
-        <b>
-          Enabled ✓
-        </b>
-
-      </div>
-
-      <div class="status">
-
-        <span>
-          Local focus
-        </span>
-
-        <b>
-          100%
-        </b>
-
-      </div>
+            </div>
 
 
-      <button
-        class="action"
-        style="width:100%;margin-top:14px"
-        onclick="alert('Demo itinerary created: Vavaʻu → cultural village visit → local lunch → island return.')">
+            <div class="choices">
 
-        ✨ Build my itinerary
+                <button
+                    class="choice"
+                    onclick="ask('I want a cultural experience')">
 
-      </button>
+                    🌺 Culture
+
+                </button>
+
+                <button
+                    class="choice"
+                    onclick="ask('I want nature and adventure')">
+
+                    🐋 Nature
+
+                </button>
+
+                <button
+                    class="choice"
+                    onclick="ask('Help me island hop')">
+
+                    ⛴️ Island hopping
+
+                </button>
+
+                <button
+                    class="choice"
+                    onclick="ask('Show me local food')">
+
+                    🍽️ Local food
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <span class="pill">
+                YOUR TRIP
+            </span>
+
+            <h3>
+                Trip snapshot
+            </h3>
+
+            <div class="status">
+
+                <span>
+                    Interest
+                </span>
+
+                <b id="interest">
+                    Not selected
+                </b>
+
+            </div>
+
+            <div class="status">
+
+                <span>
+                    Local experiences
+                </span>
+
+                <b>
+                    ✓
+                </b>
+
+            </div>
+
+            <div class="status">
+
+                <span>
+                    Island information
+                </span>
+
+                <b>
+                    ✓
+                </b>
+
+            </div>
+
+            <div class="status">
+
+                <span>
+                    Travel guidance
+                </span>
+
+                <b>
+                    ✓
+                </b>
+
+            </div>
+
+            <button
+                class="action"
+                style="width:100%;margin-top:15px"
+                onclick="buildTrip()">
+
+                ✨ Build My Itinerary
+
+            </button>
+
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- ISLAND DISCOVERY -->
+<!-- ================= ISLAND DISCOVERY ================= -->
 
 <section
-  id="islands"
-  class="panel">
+    id="islands"
+    class="panel">
 
-  <div class="section-title">
+    <div class="section-title">
 
-    <h2>
-      Find authentic experiences
-    </h2>
+        <h2>
+            🌴 Island Discovery
+        </h2>
 
-    <span>
-      Vavaʻu • Haʻapai • ʻEua
-    </span>
-
-  </div>
-
-
-  <div class="search">
-
-    <input
-      id="search"
-      placeholder="Search experiences, islands or interests…"
-      oninput="filterCards()">
-
-    <span>
-      🔎
-    </span>
-
-  </div>
-
-
-  <div
-    class="grid"
-    id="cards">
-
-
-    <div
-      class="card experience"
-      data-key="vavau whale nature adventure">
-
-      <div>
-
-        <div class="emoji">
-          🐋
-        </div>
-
-        <span class="pill">
-          VAVAʻU
+        <span>
+            Explore beyond the main tourist path
         </span>
 
-        <h3>
-          Ocean & Eco-Adventure
-        </h3>
+    </div>
 
-        <p>
-          Discover sustainable exploration
-          of Tonga's natural environment.
-        </p>
 
-      </div>
+    <div class="search">
 
-      <button
-        class="action"
-        onclick="notify('Experience saved to your itinerary.')">
+        <input
+            id="search"
+            placeholder="Search islands, culture, food or nature..."
+            oninput="filterCards()">
 
-        Add to trip
-
-      </button>
+        <span>
+            🔎
+        </span>
 
     </div>
 
 
     <div
-      class="card experience"
-      data-key="haapai mat weaving culture village">
+        class="grid"
+        id="cards">
 
-      <div>
 
-        <div class="emoji">
-          🧵
-        </div>
-
-        <span class="pill">
-          HAʻAPAI
-        </span>
-
-        <h3>
-          Village Mat Weaving
-        </h3>
-
-        <p>
-          Meet community makers and
-          experience a living cultural tradition.
-        </p>
-
-      </div>
-
-      <button
-        class="action"
-        onclick="notify('Community experience added.')">
-
-        Add to trip
-
-      </button>
-
-    </div>
-
-
-    <div
-      class="card experience"
-      data-key="eua food umu culture">
-
-      <div>
-
-        <div class="emoji">
-          🍽️
-        </div>
-
-        <span class="pill">
-          ʻEUA
-        </span>
-
-        <h3>
-          Home-Cooked ʻUmu
-        </h3>
-
-        <p>
-          Experience local hospitality
-          through a traditional meal.
-        </p>
-
-      </div>
-
-      <button
-        class="action"
-        onclick="notify('Local meal added.')">
-
-        Add to trip
-
-      </button>
-
-    </div>
-
-
-    <div
-      class="card experience"
-      data-key="culture church choir sunday">
-
-      <div>
-
-        <div class="emoji">
-          ⛪
-        </div>
-
-        <span class="pill">
-          CULTURE
-        </span>
-
-        <h3>
-          Sunday Church Choir
-        </h3>
-
-        <p>
-          Discover a community experience
-          that might otherwise be missed.
-        </p>
-
-      </div>
-
-      <button
-        class="action"
-        onclick="notify('Cultural experience saved.')">
-
-        Add to trip
-
-      </button>
-
-    </div>
-
-
-    <div
-      class="card experience"
-      data-key="kava ceremony culture">
-
-      <div>
-
-        <div class="emoji">
-          🌺
-        </div>
-
-        <span class="pill">
-          COMMUNITY
-        </span>
-
-        <h3>
-          Traditional Kava Ceremony
-        </h3>
-
-        <p>
-          Learn local etiquette and participate
-          respectfully in community life.
-        </p>
-
-      </div>
-
-      <button
-        class="action"
-        onclick="notify('Etiquette guide added.')">
-
-        Add to trip
-
-      </button>
-
-    </div>
-
-
-    <div
-      class="card experience"
-      data-key="ferry transport live alert">
-
-      <div>
-
-        <div class="emoji">
-          ⛴️
-        </div>
-
-        <span class="pill">
-          LIVE ALERT
-        </span>
-
-        <h3>
-          Ferry Connections
-        </h3>
-
-        <p>
-          Keep practical island-hopping
-          information accessible in one place.
-        </p>
-
-      </div>
-
-      <button
-        class="action"
-        onclick="notify('Ferry alerts enabled.')">
-
-        Enable alerts
-
-      </button>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-<!-- TALANOA MARKET -->
-
-<section
-  id="vendor"
-  class="panel">
-
-  <div class="section-title">
-
-    <h2>
-      Talanoa Market
-    </h2>
-
-    <span>
-      “If she can make a phone call,
-      she can market her product.”
-    </span>
-
-  </div>
-
-
-  <div class="detail">
-
-
-    <div class="card voice">
-
-      <div>
+        <!-- VAVA'U -->
 
         <div
-          class="mic"
-          id="mic"
-          onclick="voiceDemo()">
+            class="card experience"
+            data-key="vavau whale nature ocean adventure">
 
-          🎙️
+            <div>
+
+                <div class="emoji">
+                    🐋
+                </div>
+
+                <span class="pill">
+                    VAVAʻU
+                </span>
+
+                <h3>
+                    Ocean & Eco-Adventure
+                </h3>
+
+                <p>
+                    Discover Tonga's beautiful
+                    marine environment and
+                    sustainable island adventures.
+                </p>
+
+            </div>
+
+            <button
+                class="action"
+                onclick="saveExperience('Vavaʻu Ocean & Eco-Adventure')">
+
+                Add to Trip
+
+            </button>
 
         </div>
 
-        <h3 id="voiceTitle">
-          Tap to start a vendor call
-        </h3>
 
-        <p id="voiceText">
+        <!-- HA'APAI -->
 
-          No app.
-          No typing.
-          No English required.
+        <div
+            class="card experience"
+            data-key="haapai mat weaving culture village">
 
-          This demo simulates the
-          voice-first pathway.
+            <div>
 
-        </p>
+                <div class="emoji">
+                    🧵
+                </div>
 
-      </div>
+                <span class="pill">
+                    HAʻAPAI
+                </span>
+
+                <h3>
+                    Village Mat Weaving
+                </h3>
+
+                <p>
+                    Meet local makers and
+                    experience a living Tongan
+                    cultural tradition.
+                </p>
+
+            </div>
+
+            <button
+                class="action"
+                onclick="saveExperience('Haʻapai Village Mat Weaving')">
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+
+        <!-- 'EUA -->
+
+        <div
+            class="card experience"
+            data-key="eua food umu culture">
+
+            <div>
+
+                <div class="emoji">
+                    🍽️
+                </div>
+
+                <span class="pill">
+                    ʻEUA
+                </span>
+
+                <h3>
+                    Home-Cooked ʻUmu
+                </h3>
+
+                <p>
+                    Experience local hospitality
+                    through traditional food and
+                    community connection.
+                </p>
+
+            </div>
+
+            <button
+                class="action"
+                onclick="saveExperience('ʻEua Home-Cooked ʻUmu')">
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+
+        <!-- CULTURE -->
+
+        <div
+            class="card experience"
+            data-key="culture church community tonga">
+
+            <div>
+
+                <div class="emoji">
+                    ⛪
+                </div>
+
+                <span class="pill">
+                    CULTURE
+                </span>
+
+                <h3>
+                    Sunday Church Choir
+                </h3>
+
+                <p>
+                    Discover a community experience
+                    that gives visitors a glimpse into
+                    Tongan life.
+                </p>
+
+            </div>
+
+            <button
+                class="action"
+                onclick="saveExperience('Sunday Church Choir')">
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+
+        <!-- LOCAL FOOD -->
+
+        <div
+            class="card experience"
+            data-key="food tonga local traditional">
+
+            <div>
+
+                <div class="emoji">
+                    🥥
+                </div>
+
+                <span class="pill">
+                    LOCAL FOOD
+                </span>
+
+                <h3>
+                    Tongan Food Experience
+                </h3>
+
+                <p>
+                    Discover local dishes and
+                    community food experiences.
+                </p>
+
+            </div>
+
+            <button
+                class="action"
+                onclick="saveExperience('Tongan Food Experience')">
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
+
+        <!-- ISLAND TRAVEL -->
+
+        <div
+            class="card experience"
+            data-key="ferry transport island travel">
+
+            <div>
+
+                <div class="emoji">
+                    ⛴️
+                </div>
+
+                <span class="pill">
+                    ISLAND TRAVEL
+                </span>
+
+                <h3>
+                    Island Connections
+                </h3>
+
+                <p>
+                    Explore options for travelling
+                    between Tonga's island groups.
+                </p>
+
+            </div>
+
+            <button
+                class="action"
+                onclick="saveExperience('Island Connections')">
+
+                Add to Trip
+
+            </button>
+
+        </div>
+
 
     </div>
-
-
-    <div class="card">
-
-      <span class="pill">
-        6-STEP JOURNEY
-      </span>
-
-      <div class="status">
-
-        <b>
-          1. Vendor
-        </b>
-
-        <span>
-          Ordinary phone
-        </span>
-
-      </div>
-
-      <div class="status">
-
-        <b>
-          2. Calls
-        </b>
-
-        <span>
-          One number
-        </span>
-
-      </div>
-
-      <div class="status">
-
-        <b>
-          3. Talks
-        </b>
-
-        <span>
-          Tongan voice
-        </span>
-
-      </div>
-
-      <div class="status">
-
-        <b>
-          4. AI works
-        </b>
-
-        <span>
-          Transcribe + translate
-        </span>
-
-      </div>
-
-      <div class="status">
-
-        <b>
-          5. Advert
-        </b>
-
-        <span>
-          Story + price + photo
-        </span>
-
-      </div>
-
-      <div class="status">
-
-        <b>
-          6. Customer
-        </b>
-
-        <span>
-          Discover + contact
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="cta">
-
-    <div>
-
-      <b>
-        Digital access without
-        requiring digital literacy.
-      </b>
-
-      <br>
-
-      <span style="color:#6b7d84">
-
-        AI service + trusted human
-        digital hub complete the digital work.
-
-      </span>
-
-    </div>
-
-    <button onclick="voiceDemo()">
-
-      ▶ Run demo
-
-    </button>
-
-  </div>
 
 </section>
 
 
-<!-- PAYMENT -->
+<!-- ================= PAYMENT + QR ================= -->
 
 <section
-  id="payment"
-  class="panel">
+    id="payment"
+    class="panel">
 
-  <div class="section-title">
+    <div class="section-title">
 
-    <h2>
-      Integrated e-Payments + QR
-    </h2>
+        <h2>
+            💳 Payment + QR
+        </h2>
 
-    <span>
-      Tourist → payment → vendor
-    </span>
-
-  </div>
-
-
-  <div class="grid">
-
-
-    <div class="card">
-
-      <span class="pill">
-        QR ENGAGEMENT
-      </span>
-
-      <h3>
-        Scan the experience
-      </h3>
-
-      <div class="qr"></div>
-
-      <p style="text-align:center;margin-top:14px">
-
-        Demo QR — in production it can
-        link a tourist to a historical site,
-        story or booking flow.
-
-      </p>
-
-    </div>
-
-
-    <div class="card">
-
-      <span class="pill">
-        PAYMENT FLOW
-      </span>
-
-      <h3>
-        Simple local impact
-      </h3>
-
-      <div class="payment">
-
-        $120
-
-        <small
-          style="font-size:14px;color:#6b7d84">
-
-          TOP
-
-        </small>
-
-      </div>
-
-      <p style="margin:12px 0">
-
-        Tourist pays with an international
-        card. Funds can be converted into
-        a local digital-wallet flow for the vendor.
-
-      </p>
-
-      <button
-        class="action"
-        onclick="paymentDemo()">
-
-        Simulate secure payment
-
-      </button>
-
-      <div
-        id="paymsg"
-        style="margin-top:12px;font-weight:800">
-
-      </div>
-
-    </div>
-
-
-    <div class="card">
-
-      <span class="pill">
-        LOW COMPLEXITY
-      </span>
-
-      <h3>
-        Why it matters
-      </h3>
-
-      <p>
-
-        Reduce cash-only friction,
-        improve discoverability and help
-        more tourist spending reach
-        island communities directly.
-
-      </p>
-
-      <div
-        class="progress"
-        style="margin-top:18px">
-
-        <i></i>
-
-      </div>
-
-      <small style="color:#6b7d84">
-
-        Prototype only —
-        no real payment is processed.
-
-      </small>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-<!-- ROLLOUT -->
-
-<section
-  id="rollout"
-  class="panel">
-
-  <div class="section-title">
-
-    <h2>
-      One year → nationwide
-    </h2>
-
-    <span>
-      Four-phase strategic rollout
-    </span>
-
-  </div>
-
-
-  <div class="timeline">
-
-
-    <div class="phase">
-
-      <b>
-        Q1
-      </b>
-
-      <div>
-
-        <strong>
-          01 — RESEARCH
-        </strong>
-
-        <br>
-
-        <span style="color:#6b7d84">
-
-          Months 1–3 • Workshops •
-          community discovery • vendor needs
-
+        <span>
+            Making tourism experiences easier to access
         </span>
 
-      </div>
+    </div>
+
+
+    <div class="payment-grid">
+
+
+        <!-- QR -->
+
+        <div class="card">
+
+            <span class="pill">
+                QR EXPERIENCE
+            </span>
+
+            <h3>
+                Scan to Explore
+            </h3>
+
+            <div class="qr-box">
+
+                <div class="qr"></div>
+
+            </div>
+
+            <p>
+                Tourists can scan a QR code at a
+                tourism site, activity or local
+                experience to access information.
+            </p>
+
+            <button
+                class="action"
+                style="width:100%"
+                onclick="scanDemo()">
+
+                📱 Simulate Scan
+
+            </button>
+
+        </div>
+
+
+        <!-- PAYMENT -->
+
+        <div class="card">
+
+            <span class="pill">
+                SIMPLE PAYMENT
+            </span>
+
+            <h3>
+                Pay for an Experience
+            </h3>
+
+            <div class="payment">
+
+                $120
+
+                <small>
+                    TOP
+                </small>
+
+            </div>
+
+            <p>
+                The concept allows tourists to
+                pay for local tourism experiences
+                through a simple digital flow.
+            </p>
+
+            <button
+                class="action"
+                style="width:100%"
+                onclick="paymentDemo()">
+
+                💳 Simulate Payment
+
+            </button>
+
+            <div
+                id="paymentResult"
+                class="payment-result">
+
+                ✓ Payment successful — demo only
+
+            </div>
+
+        </div>
+
+
+        <!-- FLOW -->
+
+        <div class="card">
+
+            <span class="pill">
+                TOURIST FLOW
+            </span>
+
+            <h3>
+                How it Works
+            </h3>
+
+            <div class="flow">
+
+                <div class="flow-step">
+
+                    <div class="flow-number">
+                        1
+                    </div>
+
+                    <div>
+                        <b>
+                            Discover
+                        </b>
+
+                        <br>
+
+                        <small>
+                            Find a local experience
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="flow-step">
+
+                    <div class="flow-number">
+                        2
+                    </div>
+
+                    <div>
+                        <b>
+                            Scan
+                        </b>
+
+                        <br>
+
+                        <small>
+                            Access information
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="flow-step">
+
+                    <div class="flow-number">
+                        3
+                    </div>
+
+                    <div>
+                        <b>
+                            Pay
+                        </b>
+
+                        <br>
+
+                        <small>
+                            Complete the booking/payment
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="flow-step">
+
+                    <div class="flow-number">
+                        4
+                    </div>
+
+                    <div>
+                        <b>
+                            Experience
+                        </b>
+
+                        <br>
+
+                        <small>
+                            Connect with local Tonga
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 
-    <div class="phase">
+    <div class="cta">
 
-      <b>
-        Q2
-      </b>
+        <div>
 
-      <div>
+            <b>
+                DISCOVER • CONNECT • SUPPORT LOCAL
+            </b>
 
-        <strong>
-          02 — BUILD
-        </strong>
+            <br>
 
-        <br>
+            <span style="color:#6b7d84">
+                Technology designed around the
+                tourist experience and local communities.
+            </span>
 
-        <span style="color:#6b7d84">
+        </div>
 
-          Months 4–6 • WhatsApp bot •
-          PWA • QR • vendor onboarding
+        <button onclick="showTab('tourist')">
 
-        </span>
+            Start Exploring →
 
-      </div>
-
-    </div>
-
-
-    <div class="phase">
-
-      <b>
-        Q3
-      </b>
-
-      <div>
-
-        <strong>
-          03 — PILOT
-        </strong>
-
-        <br>
-
-        <span style="color:#6b7d84">
-
-          Months 7–9 • Vavaʻu •
-          whale season • live testing
-
-        </span>
-
-      </div>
+        </button>
 
     </div>
-
-
-    <div class="phase">
-
-      <b>
-        Q4
-      </b>
-
-      <div>
-
-        <strong>
-          04 — LAUNCH
-        </strong>
-
-        <br>
-
-        <span style="color:#6b7d84">
-
-          Months 10–12 • All island groups •
-          tourism network
-
-        </span>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-
-  <div class="cta">
-
-    <div>
-
-      <b>
-        LOW-BANDWIDTH •
-        LOW-COMPLEXITY •
-        LOCAL-FIRST
-      </b>
-
-      <br>
-
-      <span style="color:#6b7d84">
-
-        Designed around the practical
-        constraints and solutions
-        in the presentation.
-
-      </span>
-
-    </div>
-
-    <button onclick="showTab('tourist')">
-
-      Restart demo
-
-    </button>
-
-  </div>
 
 </section>
 
 
 <!-- TOAST -->
 
-<div
-  id="toast"
-  style="
-    position:fixed;
-    bottom:24px;
-    left:50%;
-    transform:translateX(-50%) translateY(100px);
-    background:var(--navy);
-    color:#fff;
-    padding:13px 17px;
-    border-radius:13px;
-    font-weight:800;
-    transition:.25s;
-    z-index:10;
-  ">
-
-</div>
-
+<div id="toast"></div>
 
 </main>
 
 
 <footer>
 
-  TongaTalanoa AI •
-  Local-first tourism technology
+    TongaTalanoa AI •
+    Discover Tonga. Connect locally.
 
 </footer>
-
 
 </div>
 
 
 <script>
 
-/* TAB NAVIGATION */
+/* ================= TAB NAVIGATION ================= */
 
-function showTab(id){
+function showTab(id) {
 
-  document
-    .querySelectorAll('.panel')
-    .forEach(x =>
-      x.classList.remove('active')
-    );
+    document
+        .querySelectorAll(".panel")
+        .forEach(panel => {
+            panel.classList.remove("active");
+        });
 
-  document
-    .getElementById(id)
-    .classList.add('active');
-
-
-  document
-    .querySelectorAll('.tab')
-    .forEach(x =>
-      x.classList.remove('active')
-    );
+    document
+        .getElementById(id)
+        .classList.add("active");
 
 
-  const names = {
-
-    tourist:'tourist',
-    islands:'island',
-    vendor:'vendor',
-    payment:'payment',
-    rollout:'rollout'
-
-  };
+    document
+        .querySelectorAll(".tab")
+        .forEach(tab => {
+            tab.classList.remove("active");
+        });
 
 
-  const target =
-    names[id];
+    const tabs =
+        document.querySelectorAll(".tab");
 
 
-  const button =
-    [...document.querySelectorAll('.tab')]
-    .find(x =>
-      x.textContent
-       .toLowerCase()
-       .includes(target)
-    );
+    if (id === "tourist") {
+        tabs[0].classList.add("active");
+    }
+
+    if (id === "islands") {
+        tabs[1].classList.add("active");
+    }
+
+    if (id === "payment") {
+        tabs[2].classList.add("active");
+    }
 
 
-  if(button){
-    button.classList.add('active');
-  }
-
-
-  window.scrollTo({
-
-    top:
-      document
-      .querySelector('main')
-      .offsetTop - 10,
-
-    behavior:'smooth'
-
-  });
-
+    window.scrollTo({
+        top: document
+            .querySelector("main")
+            .offsetTop - 10,
+        behavior: "smooth"
+    });
 }
 
 
-/* TOURIST AI */
+/* ================= AI CONCIERGE ================= */
 
-function ask(text){
+function ask(text) {
 
-  const chat =
-    document.getElementById('chat');
-
-
-  chat.innerHTML +=
-    '<div class="msg user">'
-    + text +
-    '</div>';
-
-
-  let reply =
-    'I can tailor that around local communities, practical travel information and authentic experiences.';
-
-
-  let interest =
-    'Custom';
-
-
-  if(text.includes('cultural')){
-
-    reply =
-      'For culture, consider village mat weaving, a Sunday church choir experience, home-cooked ʻumu, and respectful cultural etiquette.';
-
-    interest =
-      'Culture';
-
-  }
-
-
-  if(text.includes('nature')){
-
-    reply =
-      'For nature, I’d highlight Vavaʻu eco-adventure and whale-season activities, subject to live conditions and availability.';
-
-    interest =
-      'Nature';
-
-  }
-
-
-  if(text.includes('island')){
-
-    reply =
-      'For island hopping, I can build a route around ferry information and your available time.';
-
-    interest =
-      'Island hopping';
-
-  }
-
-
-  if(text.includes('food')){
-
-    reply =
-      'For local food, look for community-hosted meals such as a traditional ʻumu experience.';
-
-    interest =
-      'Food';
-
-  }
-
-
-  setTimeout(() => {
+    const chat =
+        document.getElementById("chat");
 
     chat.innerHTML +=
-      '<div class="msg ai">'
-      + reply +
-      '</div>';
+        `<div class="msg user">
+            ${text}
+        </div>`;
 
 
-    chat.scrollTop =
-      chat.scrollHeight;
+    let reply =
+        "I can help you discover local experiences and plan your Tonga journey.";
+
+    let interest =
+        "Custom";
 
 
-    document
-      .getElementById('interest')
-      .textContent =
-      interest;
+    if (text.includes("cultural")) {
 
-  },300);
+        reply =
+            "For culture, explore local weaving, community experiences, traditional food and other respectful cultural activities.";
 
+        interest =
+            "Culture";
+    }
+
+
+    if (text.includes("nature")) {
+
+        reply =
+            "For nature, I can help you discover Tonga's islands, marine environment and outdoor experiences.";
+
+        interest =
+            "Nature";
+    }
+
+
+    if (text.includes("island")) {
+
+        reply =
+            "For island hopping, I can help you explore Vavaʻu, Haʻapai and ʻEua and organise your travel interests.";
+
+        interest =
+            "Island hopping";
+    }
+
+
+    if (text.includes("food")) {
+
+        reply =
+            "For food, discover local Tongan dishes and community-based food experiences.";
+
+        interest =
+            "Local food";
+    }
+
+
+    setTimeout(() => {
+
+        chat.innerHTML +=
+            `<div class="msg ai">
+                ${reply}
+            </div>`;
+
+
+        chat.scrollTop =
+            chat.scrollHeight;
+
+
+        document
+            .getElementById("interest")
+            .textContent =
+            interest;
+
+    }, 400);
 }
 
 
-/* TALANOA MARKET */
+/* ================= ITINERARY ================= */
 
-function voiceDemo(){
+function buildTrip() {
 
-  const mic =
-    document.getElementById('mic');
-
-  const title =
-    document.getElementById('voiceTitle');
-
-  const text =
-    document.getElementById('voiceText');
-
-
-  mic.classList.add('live');
-
-
-  title.textContent =
-    'Listening…';
-
-
-  text.textContent =
-    '“Mālō. I make woven mats in my village. One mat is 80 paʻanga…”';
-
-
-  setTimeout(() => {
-
-    title.textContent =
-      'AI is shaping the maker story…';
-
-
-    text.textContent =
-      'Transcribing Tongan speech → translating → creating a clear advert draft.';
-
-  },1400);
-
-
-  setTimeout(() => {
-
-    mic.classList.remove('live');
-
-
-    title.textContent =
-      'Advert ready ✓';
-
-
-    text.textContent =
-      '“Handwoven village mat • 80 TOP • Community-made • Contact vendor through TongaTalanoa.”';
-
-
-    notify(
-      'Talanoa Market demo complete — advert draft created.'
+    showToast(
+        "✨ Demo itinerary created: Tonga experiences added to your trip!"
     );
-
-  },3000);
-
 }
 
 
-/* PAYMENT */
+/* ================= ISLAND DISCOVERY ================= */
 
-function paymentDemo(){
+function saveExperience(name) {
 
-  document
-    .getElementById('paymsg')
-    .textContent =
-    '✓ Demo payment approved → vendor wallet flow simulated';
-
+    showToast(
+        "✓ " + name + " added to your trip."
+    );
 }
 
 
-/* NOTIFICATION */
+/* ================= SEARCH ================= */
 
-function notify(t){
+function filterCards() {
 
-  const x =
-    document.getElementById('toast');
-
-
-  x.textContent =
-    t;
-
-
-  x.style.transform =
-    'translateX(-50%) translateY(0)';
+    const query =
+        document
+            .getElementById("search")
+            .value
+            .toLowerCase();
 
 
-  setTimeout(() => {
-
-    x.style.transform =
-      'translateX(-50%) translateY(100px)';
-
-  },2300);
-
-}
-
-
-/* SEARCH */
-
-function filterCards(){
-
-  const q =
     document
-    .getElementById('search')
-    .value
-    .toLowerCase();
+        .querySelectorAll("#cards .card")
+        .forEach(card => {
+
+            const keywords =
+                card.dataset.key.toLowerCase();
 
 
-  document
-    .querySelectorAll('#cards .card')
-    .forEach(c => {
+            if (keywords.includes(query)) {
 
-      c.style.display =
-        c.dataset.key
-        .includes(q)
-        ? 'flex'
-        : 'none';
+                card.style.display = "flex";
 
-    });
+            } else {
 
+                card.style.display = "none";
+
+            }
+
+        });
+}
+
+
+/* ================= QR ================= */
+
+function scanDemo() {
+
+    showToast(
+        "📱 QR scanned — opening the experience information."
+    );
+}
+
+
+/* ================= PAYMENT ================= */
+
+function paymentDemo() {
+
+    const result =
+        document.getElementById("paymentResult");
+
+    result.style.display =
+        "block";
+
+    showToast(
+        "💳 Demo payment completed successfully."
+    );
+}
+
+
+/* ================= NOTIFICATION ================= */
+
+function showToast(message) {
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent =
+        message;
+
+    toast.style.transform =
+        "translateX(-50%) translateY(0)";
+
+
+    setTimeout(() => {
+
+        toast.style.transform =
+            "translateX(-50%) translateY(100px)";
+
+    }, 2500);
 }
 
 </script>
